@@ -102,7 +102,7 @@ async def query_metadata(bot: Client, query: CallbackQuery):
         try:
             metadata = await bot.ask(
                 chat_id=user_id,
-                text="**Send Your Custom Metadata Code...**\n\n**Example:-** `By:- @Unrated_Coder` \n\n_Type /cancel to Stop._",
+                text="**Send Your Custom Metadata Code...**\n\n**Example:-** `By:- @CodeRips` \n\n_Type /cancel to Stop._",
                 filters=filters.text,
                 timeout=60,
                 reply_markup=ForceReply(True, placeholder="Enter Metadata Code...")
@@ -231,7 +231,7 @@ async def query_metadata(bot: Client, query: CallbackQuery):
             pass
 
     elif data == 'delete_metadata':
-        await unratedbotz.set_metadata_code(user_id, metadata_code="By :- @Unrated_Coder", is_custom=False)
+        await unratedbotz.set_metadata_code(user_id, metadata_code="By :- @CodeRips", is_custom=False)
         await safe_answer(query, "Metadata Code Deleted! (Back to Default)", show_alert=True)
         # Refresh the menu
         user_metadata = await unratedbotz.get_metadata_code(user_id)
