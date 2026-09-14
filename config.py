@@ -1,27 +1,18 @@
-
 import re, os, time
-id_pattern = re.compile(r'^.\d+$') 
+id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # bot client config
     API_ID = os.environ.get("API_ID", "")
     API_HASH = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
     BOT = None
+    STRING_SESSION = os.environ.get("STRING_SESSION", "") or None
 
-    # STRING_SESSION is optional now - bot will work without it (2GB limit)
-STRING_SESSION = os.environ.get("STRING_SESSION", "") or None
-
-# If no string, run with Bot Token only
-if not STRING_SESSION:
-    print("No STRING_SESSION found - Running in Bot mode (2GB limit)")
-else:
-    print("STRING_SESSION found - Running in Premium mode (4GB)")
-    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","Cluster0")     
+    DB_NAME = os.environ.get("DB_NAME","Cluster0")
     DB_URL = os.environ.get("DB_URL","")
- 
+
     # other configs
     IMAGE_URL = [
         "https://i.ibb.co/rGPvzbxz/2ffce4886029.jpg",
@@ -32,26 +23,17 @@ else:
     ]
     ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6426143861').split()]
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002367970315"))
-
-    # free upload limit 
-    FREE_UPLOAD_LIMIT = 6442450944 # calculation 6*1024*1024*1024=results
-
-    # premium mode feature 
-    UPLOAD_LIMIT_MODE = False 
-    PREMIUM_MODE = False 
-    
-    #force subs
+    FREE_UPLOAD_LIMIT = 6442450944
+    UPLOAD_LIMIT_MODE = False
+    PREMIUM_MODE = False
     try:
-        FORCE_SUB = int(os.environ.get("FORCE_SUB", "")) 
+        FORCE_SUB = int(os.environ.get("FORCE_SUB", ""))
     except:
         FORCE_SUB = os.environ.get("FORCE_SUB", "CodeRips")
-        
-    # wes response configuration     
     PORT = int(os.environ.get("PORT", "8080"))
     BOT_UPTIME = time.time()
 
 class Txt(object):
-    # part of text configuration
     START_TXT = """✨ <b>Hey, {}! Welcome</b> 👋
 
 🚀 <b>I am an Advanced & High-Speed Telegram Rename Bot!</b>
@@ -107,7 +89,7 @@ class Txt(object):
 
 <i>Discount of ₹9 applied on all plans!</i>
 💳 <b>Contact Admin:</b> <a href="https://t.me/ZENCURSE">ZENCURSE</a>"""
-    
+
     UPGRADE_PLAN = """💎 <b><u>Pro Upload Limit Plans</u></b>
 
 🔹 <b>Plan: Pro</b>
@@ -118,7 +100,7 @@ class Txt(object):
 
 ✨ <b>Discount on all plans: ₹9 OFF!</b>
 💳 <b>Buy Now:</b> Contact <a href="https://t.me/ZENCURSE">ZENCURSE</a>"""
-    
+
     THUMBNAIL = """🖼️ <b><u>Custom Thumbnail Settings</u></b>
 
 <b>• Set Thumbnail:</b> Send any photo directly to save it as your custom thumbnail.
@@ -171,7 +153,7 @@ Use <code>/metadata [code]</code> or reply with your code.
 --change-author @CodeRips</code>
 
 📥 <b>Help & Support:</b> <a href="https://t.me/Code_Rips_Support">CodeRips Support</a>"""
-    
+
     CUSTOM_FILE_NAME = """✒️ <b><u>Custom Prefix & Suffix Settings</u></b>
 
 <b>Prefix (Added before filename):</b>
@@ -185,7 +167,7 @@ Use <code>/metadata [code]</code> or reply with your code.
 • <code>/del_suffix</code> - Delete Suffix
 
 <b>Example:</b> <code>/set_prefix [HEVC]</code> or <code>/set_suffix @CodeRips</code>"""
-    
+
     DEV_TXT = """✨ <b><u>Special Thanks & Credits</u></b>
 
 » <b>Source Code:</b> <a href="https://graph.org/Nigga-09-13-4">Renox Rename Bot</a>
@@ -203,7 +185,7 @@ Reply to this message with your metadata code.
 --change-video-title @CodeRips
 --change-audio-title @CodeRips
 --change-author @CodeRips</code>"""
-    
+
     PROGRESS_BAR = """<b>
 ┌━━━━━━━━━━━━━━━━━━━━┐
 ├ 🚀 <b>Status:</b> {5}
