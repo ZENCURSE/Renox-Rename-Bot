@@ -13,32 +13,32 @@ class Config(object):
     STRING_SESSION = os.environ.get("STRING_SESSION", "")
     
     # database config
-    DB_NAME = os.environ.get("DB_NAME","Digital_Rename_Bot")     
+    DB_NAME = os.environ.get("DB_NAME","Cluster0")     
     DB_URL = os.environ.get("DB_URL","")
  
     # other configs
     IMAGE_URL = [
-        "https://i.pinimg.com/originals/74/b1/e8/74b1e8dc9594784e67db724d46e5faf7.jpg",
-        "https://i.pinimg.com/originals/6a/3d/d4/6a3dd41dfb4d1b0406e5be3fdb63a31a.jpg",
-        "https://i.pinimg.com/originals/4d/4b/99/4d4b9949849ac62994be0ad870b26733.jpg",
-        "https://i.pinimg.com/originals/9e/3b/53/9e3b53bbd02b185c38b44a8ff31f5209.jpg",
-        "https://i.pinimg.com/originals/eb/d4/9d/ebd49d466cfa766f1a6fb10b82fa1914.jpg"
+        "https://i.ibb.co/rGPvzbxz/2ffce4886029.jpg",
+        "https://i.ibb.co/Wvrb15XR/890a2b4ae625.jpg",
+        "https://i.ibb.co/6RtW5fnr/c9336e79330d.jpg",
+        "https://i.ibb.co/VYhWYwYt/2ead323a38a8.jpg",
+        "https://i.ibb.co/8gjQJFv4/da6bee925908.jpg"
     ]
-    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6705898491').split()]
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002123429361"))
+    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6426143861').split()]
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002367970315"))
 
     # free upload limit 
     FREE_UPLOAD_LIMIT = 6442450944 # calculation 6*1024*1024*1024=results
 
     # premium mode feature 
-    UPLOAD_LIMIT_MODE = True 
-    PREMIUM_MODE = True 
+    UPLOAD_LIMIT_MODE = False 
+    PREMIUM_MODE = False 
     
     #force subs
     try:
         FORCE_SUB = int(os.environ.get("FORCE_SUB", "")) 
     except:
-        FORCE_SUB = os.environ.get("FORCE_SUB", "Unrated_Coder")
+        FORCE_SUB = os.environ.get("FORCE_SUB", "CodeRips")
         
     # wes response configuration     
     PORT = int(os.environ.get("PORT", "8080"))
@@ -57,7 +57,7 @@ class Txt(object):
 • <b>Custom Metadata Editor</b> for videos and media files.
 • <b>Convert Video to File</b> and <b>File to Video</b> seamlessly.
 
-💎 <i>Created with ❤️ by:</i> <a href="https://t.me/Unrated_Coder"><b>Unrated Coder</b></a>"""
+💎 <i>Created with ❤️ by:</i> <a href="https://t.me/CodeRips"><b>CodeRips</b></a>"""
 
     ABOUT_TXT = """<b>✨ <u>About This Bot</u></b>
 
@@ -67,9 +67,9 @@ class Txt(object):
 <b>📕 Library :</b> {}
 <b>✏️ Language :</b> {}
 <b>💾 Database :</b> {}
-<b>📊 Version :</b> <a href="https://github.com/shinubo28always/adv-RenameBot">{}</a>
+<b>📊 Version :</b> <a href="https://t.me/Renox_Rename_Bot">{}</a>
 
-💬 <b>Need Help?</b> Contact <a href="https://t.me/Unrated_Coder">@Unrated_Coder</a>"""
+💬 <b>Need Help?</b> Contact <a href="https://t.me/CodeRips">@CodeRips</a>"""
 
     HELP_TXT = """✨ <b><u>User Guide & Help Menu</u></b>
 
@@ -84,7 +84,7 @@ class Txt(object):
 • <b>Prefix/Suffix:</b> Use <code>/set_prefix</code> & <code>/set_suffix</code> to append text.
 • <b>Metadata:</b> Use <code>/metadata</code> to toggle or set custom file metadata.
 
-ℹ️ <b>Support Channel:</b> <a href="https://t.me/Unrated_Coder">Unrated Coder</a>"""
+ℹ️ <b>Support Channel:</b> <a href="https://t.me/Code_Rips_Support">CodeRips Support</a>"""
 
     UPGRADE_PREMIUM = """💎 <b><u>Premium Subscription Plans</u></b>
 
@@ -100,7 +100,7 @@ class Txt(object):
 • 📂 <b>Supports Large Files (4GB+)</b>
 
 <i>Discount of ₹9 applied on all plans!</i>
-💳 <b>Contact Admin:</b> <a href="https://t.me/Unrated_Coder">@Unrated_Coder</a>"""
+💳 <b>Contact Admin:</b> <a href="https://t.me/ZENCURSE">ZENCURSE</a>"""
     
     UPGRADE_PLAN = """💎 <b><u>Pro Upload Limit Plans</u></b>
 
@@ -111,7 +111,7 @@ class Txt(object):
 • Duration: 1 Month | Limit: 1000 GB | Price: ₹199
 
 ✨ <b>Discount on all plans: ₹9 OFF!</b>
-💳 <b>Buy Now:</b> Contact <a href="https://t.me/Unrated_Coder">@Unrated_Coder</a>"""
+💳 <b>Buy Now:</b> Contact <a href="https://t.me/ZENCURSE">ZENCURSE</a>"""
     
     THUMBNAIL = """🖼️ <b><u>Custom Thumbnail Settings</u></b>
 
@@ -158,13 +158,13 @@ class Txt(object):
 Use <code>/metadata [code]</code> or reply with your code.
 
 <b>Sample Code Format:</b>
-<code>--change-title @Unrated_Coder
---change-video-title @Unrated_Coder
---change-audio-title @Unrated_Coder
---change-subtitle-title @Unrated_Coder
---change-author @Unrated_Coder</code>
+<code>--change-title @CodeRips
+--change-video-title @CodeRips
+--change-audio-title @CodeRips
+--change-subtitle-title @CodeRips
+--change-author @CodeRips</code>
 
-📥 <b>Help & Support:</b> <a href="https://t.me/Unrated_Coder">@Unrated_Coder</a>"""
+📥 <b>Help & Support:</b> <a href="https://t.me/Code_Rips_Support">CodeRips Support</a>"""
     
     CUSTOM_FILE_NAME = """✒️ <b><u>Custom Prefix & Suffix Settings</u></b>
 
@@ -178,25 +178,25 @@ Use <code>/metadata [code]</code> or reply with your code.
 • <code>/see_suffix</code> - View Suffix
 • <code>/del_suffix</code> - Delete Suffix
 
-<b>Example:</b> <code>/set_prefix [HEVC]</code> or <code>/set_suffix @Unrated_Coder</code>"""
+<b>Example:</b> <code>/set_prefix [HEVC]</code> or <code>/set_suffix @CodeRips</code>"""
     
     DEV_TXT = """✨ <b><u>Special Thanks & Credits</u></b>
 
-» <b>Source Code:</b> <a href="https://github.com/shinubo28always/adv-RenameBot">Advanced Rename Bot</a>
+» <b>Source Code:</b> <a href="https://graph.org/Nigga-09-13-4">Renox Rename Bot</a>
 
 ❣️ <b>Developers & Supporters:</b>
-• <a href="https://t.me/Unrated_Coder">Unrated Coder</a>
-• <a href="https://t.me/OG_Luffytaro">Luffytaro</a>"""
+• <a href="https://t.me/CodeRips">CodeRips</a>
+• <a href="https://t.me/ZENCURSE">ZENCURSE</a>"""
 
     SEND_METADATA = """🏷️ <b><u>Set Custom Metadata</u></b>
 
 Reply to this message with your metadata code.
 
 <b>Example:</b>
-<code>--change-title @Unrated_Coder
---change-video-title @Unrated_Coder
---change-audio-title @Unrated_Coder
---change-author @Unrated_Coder</code>"""
+<code>--change-title @CodeRips
+--change-video-title @CodeRips
+--change-audio-title @CodeRips
+--change-author @CodeRips</code>"""
     
     PROGRESS_BAR = """<b>
 ┌━━━━━━━━━━━━━━━━━━━━┐
