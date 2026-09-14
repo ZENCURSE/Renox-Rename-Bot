@@ -9,8 +9,14 @@ class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
     BOT = None
 
-    # premium account string session required! 
-    STRING_SESSION = os.environ.get("STRING_SESSION", "")
+    # STRING_SESSION is optional now - bot will work without it (2GB limit)
+STRING_SESSION = os.environ.get("STRING_SESSION", "") or None
+
+# If no string, run with Bot Token only
+if not STRING_SESSION:
+    print("No STRING_SESSION found - Running in Bot mode (2GB limit)")
+else:
+    print("STRING_SESSION found - Running in Premium mode (4GB)")
     
     # database config
     DB_NAME = os.environ.get("DB_NAME","Cluster0")     
