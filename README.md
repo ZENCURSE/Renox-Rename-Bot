@@ -162,11 +162,11 @@ python3 bot.py
 This project is built and maintained by:
 
 <p align="center">
-  <a href="https://t.me/Og_Luffytaro">
+  <a href="https://t.me/ZENCURSE">
     <img src="https://img.shields.io/badge/Lead%20Developer-Luffytaro-00F7FF?style=for-the-badge&logo=telegram&logoColor=black" alt="Luffytaro" />
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://t.me/Anireal_Support">
+  <a href="https://t.me/FunnyKing">
     <img src="https://img.shields.io/badge/Developer-Eren%20Yeager-7928CA?style=for-the-badge&logo=telegram&logoColor=white" alt="Eren Yeager" />
   </a>
 </p>
@@ -177,7 +177,7 @@ This project is built and maintained by:
 
 - Feel free to **Fork** this repository and customize it to suit your needs.
 - **Please retain original developer credits** when distributing or hosting forks.
-- Encountered a bug or have a suggestion? Report it at [Unrated Coder™](https://t.me/Unrated_Coder).
+- Encountered a bug or have a suggestion? Report it at [Unrated Coder™](https://t.me/CodeRips).
 
 <div align="center">
 <a href="#!"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:00f7ff,50:7928ca,100:ff007f&height=120&section=footer" width="100%"/></a>
