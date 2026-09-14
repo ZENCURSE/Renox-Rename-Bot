@@ -12,13 +12,13 @@ from plugins.file_rename import upload_doc
 image_counter = 0
 
 upgrade_button = InlineKeyboardMarkup([[        
-        InlineKeyboardButton('💳 Buy Premium', url="https://t.me/Unrated_Coder"),
+        InlineKeyboardButton('💳 Buy Premium', url="https://t.me/ZENCURSE"),
          ],[
         InlineKeyboardButton("🔙 Back", callback_data = "start")
 ]])
 
 upgrade_trial_button = InlineKeyboardMarkup([[        
-        InlineKeyboardButton('💳 Buy Premium', url="https://t.me/Unrated_Coder"),
+        InlineKeyboardButton('💳 Buy Premium', url="https://t.me/ZENCURSE"),
          ],[
         InlineKeyboardButton("🎁 Claim 12h Free Trial", callback_data = "give_trial"),
         InlineKeyboardButton("🔙 Back", callback_data = "start")
