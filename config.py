@@ -15,12 +15,8 @@ class Config(object):
 
     # other configs
     IMAGE_URL = [
-        "https://i.ibb.co/rGPvzbxz/2ffce4886029.jpg",
-        "https://i.ibb.co/Wvrb15XR/890a2b4ae625.jpg",
-        "https://i.ibb.co/6RtW5fnr/c9336e79330d.jpg",
-        "https://i.ibb.co/VYhWYwYt/2ead323a38a8.jpg",
-        "https://i.ibb.co/8gjQJFv4/da6bee925908.jpg"
-    ]
+        "https://i.ibb.co/zT2Rb3WQ/3ffb2c24b987.jpg"]
+    
     ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6426143861').split()]
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002367970315"))
     FREE_UPLOAD_LIMIT = 6442450944
@@ -188,9 +184,9 @@ Reply to this message with your metadata code.
 
     PROGRESS_BAR = """<b>
 ┌━━━━━━━━━━━━━━━━━━━━┐
-├ 🚀 <b>Status:</b> {5}
-├ 📦 <b>Size:</b> {1} / {2}
-├ 📊 <b>Progress:</b> {0}%
-├ ⚡ <b>Speed:</b> {3}/s
-├ ⏰ <b>ETA:</b> {4}
+├ ✘ <b>Status:</b> {5}
+├ ✘ <b>Size:</b> {1} / {2}
+├ ✘ <b>Progress:</b> {0}%
+├ ✘ <b>Speed:</b> {3}/s
+├ ✘ <b>ETA:</b> {4}
 └━━━━━━━━━━━━━━━━━━━━┘</b>"""
